@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pao & Co. | Morning Breakfast VIP Pass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14283C;--muted:#33475B;--sun:#F2A516;--cream:#FFF1CC;--brown:#8A5200}
+*{box-sizing:border-box}
+body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:#fff}
+h1,h2,.display{font-family:'Bricolage Grotesque','DM Sans',sans-serif;font-weight:800;margin:0}
+a{color:var(--ink)}
+.wrap{padding:0 64px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 64px}
+.logo{font-size:28px}
+.btn-outline{font-weight:700;text-decoration:none;padding:12px 22px;border:2px solid var(--ink);border-radius:999px}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:56px;padding:72px 64px;background:var(--cream)}
+.hero-text{flex:1 1 480px;display:flex;flex-direction:column;gap:24px}
+.eyebrow{font-weight:700;font-size:15px;letter-spacing:2px;color:var(--brown)}
+.hero h1{font-size:64px;line-height:1.05}
+.hero p{margin:0;font-size:20px;line-height:1.55;color:var(--muted);max-width:560px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{padding:10px 18px;background:#fff;border-radius:999px;font-weight:500}
+.card{flex:1 1 360px;max-width:480px;display:flex;flex-direction:column;gap:18px;padding:36px;background:#fff;border-radius:20px}
+.card .display{font-size:28px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700;font-size:15px}
+input[type=text],input[type=tel]{height:48px;padding:0 14px;font:inherit;font-size:16px;border:2px solid #9AA7B3;border-radius:10px}
+input:focus{outline:3px solid var(--sun);border-color:var(--ink)}
+.consent{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5;color:var(--muted)}
+.consent input{width:22px;height:22px;margin:2px 0 0}
+.submit{height:56px;font:inherit;font-weight:700;font-size:18px;color:var(--ink);background:var(--sun);border:0;border-radius:12px;cursor:pointer}
+.submit:hover{background:#E09700}
+.error{color:#B00020;font-size:14px;min-height:18px;margin:0}
+.section{padding:80px 64px;display:flex;flex-direction:column;gap:36px}
+.section h2{font-size:40px}
+.grid{display:flex;flex-wrap:wrap;gap:24px}
+.perk{flex:1 1 280px;display:flex;flex-direction:column;gap:10px;padding:28px;background:var(--cream);border-radius:16px}
+.perk .big{font-size:44px;color:var(--brown)}
+.perk b{font-size:20px}
+.perk span{font-size:16px;line-height:1.5;color:var(--muted)}
+.steps{background:var(--ink);color:#fff}
+.steps .grid{gap:32px}
+.step{flex:1 1 260px;display:flex;flex-direction:column;gap:10px}
+.step .num{font-size:48px;color:var(--sun)}
+.step b{font-size:20px}
+.step span{font-size:16px;line-height:1.5;color:#D5DDE5}
+.cta{display:inline-block;padding:16px 28px;font-weight:700;font-size:18px;text-decoration:none;color:var(--ink);background:var(--sun);border-radius:12px}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:32px 64px;font-size:15px;color:var(--muted)}
+@media (max-width:720px){
+.nav,.hero,.section,footer{padding-left:20px;padding-right:20px}
+.hero{padding-top:40px;padding-bottom:40px;gap:32px}
+.hero h1{font-size:40px}
+.hero p{font-size:18px}
+.card{padding:24px}
+.section{padding-top:48px;padding-bottom:48px}
+.section h2{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+<div class="display logo">Pao &amp; Co.</div>
+<a class="btn-outline" href="#daftar">Klaim VIP Pass</a>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<div class="eyebrow">UNTUK ANAK PAGI</div>
+<h1>Habis lari atau gowes, sarapan di mana?</h1>
+<p>Klaim Morning Breakfast VIP Pass dan nikmati Kopi Susu Warga Pao, pao hangat, dan sourdough dengan harga khusus. Voucher langsung masuk ke WhatsApp kamu.</p>
+<div class="chips">
+<div class="chip">Berlaku sebelum jam 10 pagi</div>
+<div class="chip">Gratis daftar</div>
+</div>
+</div>
+
+<form class="card" id="daftar" novalidate>
+<div class="display">Daftar VIP Pass</div>
+<div style="color:var(--muted)">Isi dua kolom ini. Voucher dikirim lewat WhatsApp.</div>
+<div class="field">
+<label for="nama">Nama</label>
+<input id="nama" type="text" placeholder="Nama kamu" autocomplete="name">
+</div>
+<div class="field">
+<label for="wa">Nomor WhatsApp</label>
+<input id="wa" type="tel" placeholder="08xxxxxxxxxx" autocomplete="tel">
+</div>
+<div class="consent">
+<input id="setuju" type="checkbox">
+<label for="setuju">Saya setuju menerima voucher dan info promo Pao &amp; Co. lewat WhatsApp.</label>
+</div>
+<p class="error" id="error" role="alert"></p>
+<button class="submit" type="submit">Kirim VIP Pass ke WhatsApp saya</button>
+</form>
+</section>
+
+<section class="section">
+<h2>Isi VIP Pass kamu</h2>
+<div class="grid">
+<div class="perk"><div class="display big">1+1</div><b>Kopi Susu Warga Pao</b><span>Beli 1 gratis 1 untuk pesanan sebelum jam 10 pagi.</span></div>
+<div class="perk"><div class="display big">Paket</div><b>Bundling sarapan</b><span>Kopi plus pao atau sourdough dengan harga paket [HARGA PAKET].</span></div>
+<div class="perk"><div class="display big">Gratis</div><b>Pastry atau bao</b><span>Hadiah untuk kunjungan pertama setelah kamu daftar.</span></div>
+</div>
+</section>
+
+<section class="section steps">
+<h2>Cara klaim, 3 langkah</h2>
+<div class="grid">
+<div class="step"><div class="display num">1</div><b>Isi nama dan nomor WhatsApp</b><span>Butuh kurang dari satu menit.</span></div>
+<div class="step"><div class="display num">2</div><b>Terima voucher di WhatsApp</b><span>Kode QR atau kode kupon, lengkap dengan peta ke outlet terdekat.</span></div>
+<div class="step"><div class="display num">3</div><b>Tunjukkan ke kasir</b><span>Tunjukkan voucher saat bayar di outlet Pao &amp; Co.</span></div>
+</div>
+<div><a class="cta" href="#daftar">Klaim VIP Pass sekarang</a></div>
+</section>
+
+<footer>
+<div>Pao &amp; Co. | [ALAMAT OUTLET] | Buka sampai jam [JAM TUTUP]</div>
+<div>Instagram @paoand.co | WhatsApp [NOMOR WHATSAPP]</div>
+</footer>
+
+<script>
+// Ganti dengan nomor WhatsApp Pao & Co. (format internasional, tanpa + dan spasi)
+var WA_NUMBER = "628XXXXXXXXXX";
+
+document.getElementById("daftar").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var nama = document.getElementById("nama").value.trim();
+  var wa = document.getElementById("wa").value.replace(/[^0-9]/g, "");
+  var setuju = document.getElementById("setuju").checked;
+  var err = document.getElementById("error");
+  if (!nama) { err.textContent = "Isi nama kamu dulu."; return; }
+  if (wa.length < 9) { err.textContent = "Nomor WhatsApp belum lengkap."; return; }
+  if (!setuju) { err.textContent = "Centang persetujuan untuk lanjut."; return; }
+  err.textContent = "";
+  var pesan = "Halo Pao & Co., saya " + nama + " (WA: " + wa + "). Saya mau klaim Morning Breakfast VIP Pass. VIP";
+  window.location.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(pesan);
+});
+</script>
+</body>
+</html>
